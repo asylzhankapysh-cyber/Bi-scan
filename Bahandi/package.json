@@ -1,0 +1,23 @@
+{
+  "name": "b-scan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "telegram:setup": "node server/setup-telegram.js",
+    "build:css": "tailwindcss -i ./tailwind.input.css -o ./utilities.css --minify --content ./index.html ./js/**/*.js"
+  },
+  "dependencies": {
+    "express": "5.1.0",
+    "express-rate-limit": "7.5.1",
+    "dotenv": "16.6.1",
+    "helmet": "8.1.0",
+    "nodemailer": "7.0.5",
+    "pg": "8.16.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
